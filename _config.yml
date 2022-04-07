@@ -1,0 +1,5 @@
+encoding: utf-8
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE", "CNAME"]
+
+title: Site Title
+description: Site Description
