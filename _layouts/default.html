@@ -1,0 +1,59 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>{{ site.title }}</title>
+	{% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+	<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+	{% include "custom-head.html" %}
+
+	<link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css">
+
+	<style>
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+	.container {
+		width: 85%;
+		padding: 0;
+	}
+}
+
+@edia (min-width: 550px) {
+	.container {
+		width: 80%;
+	}
+}
+
+footer > small {
+	text-align: center;
+}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>{{ site.title }}</h1>
+	</header>
+	<main class="container">
+{{ content }}
+	</main>
+	<footer>
+		<small>&copy; "{{ site.copyright | default: site.title }}"</small>
+	</footer>
+{% include "custom-javascript.html" %}
+</body>
+</html>
